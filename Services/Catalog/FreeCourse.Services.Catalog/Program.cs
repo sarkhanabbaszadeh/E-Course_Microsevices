@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.Configure<DatabaseSettings>(config.GetSection("DatabaseSettings"));
 
-builder.Services.AddSingleton<DatabaseSettings>(sp =>
+builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 {
 	return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
