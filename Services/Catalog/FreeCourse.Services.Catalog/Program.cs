@@ -1,4 +1,12 @@
+using FreeCourse.Services.Catalog.Settings;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var config = new ConfigurationBuilder()
+				 .SetBasePath(Directory.GetCurrentDirectory())
+				 .AddJsonFile("appsettings.json")
+				 .Build();
 
 // Add services to the container.
 
@@ -8,6 +16,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.Configure<DatabaseSettings>(config.GetSection("DatabaseSettings"));
+
+builder.Services.AddSingleton<DatabaseSettings>(sp =>
+{
+	return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+});
 
 var app = builder.Build();
 
