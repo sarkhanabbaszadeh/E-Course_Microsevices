@@ -1,2 +1,5 @@
 # E-Course Microsevices
-+ MongoDB.Driver
+----------------------
+Use database technology
++ SQL Server Express (EF core)
++ MongoDB Driver
