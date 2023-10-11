@@ -2,7 +2,7 @@
 ----------------------
 API GATE WAY - WEB & MOBILE
 ________________________
-Use database technology
+Use database technology :
 ________________________
 + SQL Server Express (EF core)
 + MongoDB Driver
