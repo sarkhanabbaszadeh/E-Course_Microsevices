@@ -2,7 +2,7 @@
 ----------------------
 API GATE WAY - WEB & MOBILE
 ________________________
-Domain-Driven Design(DDD) 
+Domain-Driven Design(DDD) and CQRS pattern
 ________________________
 Use database technology :
 
