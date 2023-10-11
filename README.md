@@ -2,8 +2,10 @@
 ----------------------
 API GATE WAY - WEB & MOBILE
 ________________________
-Use database technology :
+Domain-Driven Design(DDD) 
 ________________________
+Use database technology :
+
 + SQL Server Express (EF core)
 + MongoDB Driver
 + Redis StaticExchange
