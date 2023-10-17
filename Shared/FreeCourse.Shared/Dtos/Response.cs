@@ -19,7 +19,7 @@ namespace FreeCourse.Shared.Dtos
 
 		public List<string> Errors { get; set; }
 
-		// Statci Factory Method
+		// Static Factory Method
 		public static Response<T> Success(T data, int statusCode)
 		{
 			return new Response<T> { Data = data, StatusCode = statusCode };
